@@ -1,0 +1,73 @@
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Applies CSS reset: removes default padding, margin, and sets box-sizing to border-box */
+}
+
+/* Body Styles */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #048492;
+    /* Sets the body height to 100% of the viewport height and centers its contents */
+}
+
+/* Calculator Wrapper Styles */
+.wrapper {
+    width: 100%;
+    max-width: 300px;
+    background: #fff;
+    padding: 10px 20px 20px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 5, 24, 0.05);
+    border: black solid;
+    /* Styles the container that holds the calculator */
+}
+
+/* Calculator Button Grid Styles */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+    /* Uses CSS grid to create a 4-column grid for the calculator buttons */
+}
+
+/* Calculator Display Styles */
+.display {
+    font-size: 25px;
+    height: 80px;
+    width: 100%;
+    border: #000e1a solid;
+    text-align: right;
+    color: #000e1a;
+    pointer-events: none;
+    /* Styles the calculator display */
+}
+
+/* Calculator Button Styles */
+.buttons button {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    /* Styles the calculator buttons */
+}
+
+/* Calculator Button Pressed Styles */
+.button button:active {
+    transform: scale(0.99);
+    /* Applies a slight scale transformation when a button is pressed */
+}
+
+/* Operator Button Styles */
+.operator {
+    color: #2f9fff;
+    /* Styles the operator buttons */
+}
