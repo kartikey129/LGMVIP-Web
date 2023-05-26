@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global CSS reset to remove default margins, paddings, and box sizing */
+
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(140deg,#B83B5E,#F08A5D);
+    padding: 10px;
+}
+
+/* Wrapper for the entire content with full width and minimum height, background gradient, and padding */
+
+.container
+{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+}
+
+/* Container for the to-do list with a maximum width of 540px, white background, margin, and padding */
+
+#heading{
+    padding-left: 140px;
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Heading styles with left padding, color, flex display, alignment, and margin */
+
+#icon{
+    width: 100px;
+    height: 100px;
+}
+
+/* Icon image styles with width and height */
+
+.inputfield
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* Input field container styles with flex display, alignment, background, border radius, padding, and margin */
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+/* Input field styles with flex size, border, outline, transparent background, padding, and font weight */
+
+.btn
+{
+    background-color: #F97B22;
+    width: fit-content; 
+    color: white;
+    padding: 0.8rem 2.3rem; 
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5;
+    font-weight: 500;
+    border: solid 3px transparent; 
+    position: relative;
+    z-index: 1;
+}
+
+/* Button styles with background color, width, color, padding, box shadow, font size, cursor, transition, font weight, border, position, and z-index */
+
+.btn::before{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8;
+}
+
+/* Pseudo-element styles for the button animation */
+
+.btn:hover::before{
+    transform: scaleX(1);
+}
+
+/* Pseudo-element styles for the button animation on hover */
+
+.btn:hover{
+    border: solid 3px #F97B22;
+    color: #F97B22;
+    scale: 0.9;
+}
+
+/* Button styles on hover with border, color, and scale */
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Styles for each list item in the to-do list with no list style, font size, padding, user-select, cursor, and position */
+
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./Images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 0px;
+}
+
+/* Pseudo-element styles for the unchecked state of list items */
+
+ul li.checked{
+    background-color:#d2fed2; 
+    text-decoration: line-through;
+}
+
+/* Styles for checked list items with background color and line-through text decoration */
+
+ul li.checked::before{
+    background-image: url(./Images/check-mark.png);
+}
+
+/* Pseudo-element styles for the checked state of list items */
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+/* Styles for the delete icon (span) within each list item */
+
+ul li span:hover{
+    background: #edeef0;
+}
+
+/* Styles for the delete icon on hover with background color */
+

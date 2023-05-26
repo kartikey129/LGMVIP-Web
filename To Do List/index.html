@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List </title>
+    <link rel="icon" type="image/x-icon" href="./Images/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <!-- Heading section with To-Do List title and icon image -->
+            <h2 id="heading">To-Do List <img id="icon" src="./Images/icon.png" alt="To Do Icon Image"></h2>
+            
+            <!-- Input field for adding tasks -->
+            <div class="inputfield">
+                <input type="text" id="inputbox" placeholder="Add your task">
+                <button class="btn" onclick="addTask()">Add</button>
+            </div>
+            
+            <!-- Container for the task list -->
+            <ul id="list-container">
+                <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- JavaScript file for adding functionality to the to-do list -->
+    <script src="script.js"></script>
+</body>
+</html>
